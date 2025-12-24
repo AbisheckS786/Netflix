@@ -1,0 +1,78 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 4%;
+    z-index: var(--z-navbar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+
+.navbar.black {
+    background-color: var(--background-black);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: var(--netflix-red);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--text-white);
+}
+
+.navLink {
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+    color: var(--text-gray);
+    opacity: 0.8;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+    /* Placeholder */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        /* Hide links on mobile for now */
+    }
+}
